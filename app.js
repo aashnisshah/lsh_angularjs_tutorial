@@ -1,4 +1,4 @@
-var angularApp = angular.module('AngularApp', ['ngRoute']);
+var angularApp = angular.module('AngularApp', ['ngRoute', 'swapi']);
 
 angularApp.config(['$routeProvider',
   function($routeProvider){
