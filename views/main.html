@@ -3,6 +3,9 @@
 
 <div>
   <div ng-repeat="person in data">
-    <p>{{person}}</p>
+    <p>
+      <b>{{ person.name }}</b> - <span ng-repeat="film in person.films">{{films[film]}}</span>
+    </p>
   </div>
+  <hr>
 </div>

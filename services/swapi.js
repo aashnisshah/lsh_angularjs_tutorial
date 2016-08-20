@@ -15,6 +15,16 @@ services.factory('SwapiService', ['$http',
           return response;
         });
     };
+
+    Swapi.films = function() {
+      var path = '/films';
+      var url = Swapi.domain + path;
+     
+      return $http.get(url)
+        .then(function(response){
+          return response;
+        });
+    };
         
     return Swapi;
   }
