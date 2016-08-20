@@ -26,7 +26,10 @@ angularApp.controller('MainCtrl', [
         // adding film names to list of films
         angular.forEach($scope.filmInfo, function(film) {
           var api_call = 'http://swapi.co/api/films/' + film.episode_id + '/';
-          $scope.films[api_call] = film.title;
+          $scope.films[api_call] = {
+              'title': film.title,
+              'episode_id': film.episode_id
+            };
         }); 
     });
 

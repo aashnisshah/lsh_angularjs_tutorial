@@ -8,6 +8,16 @@ angularApp.config(['$routeProvider',
       controller : 'MainCtrl',
       controllerAs : 'main'
     })
+    .when('/character/:id', {
+      templateUrl: 'views/character.html',
+      controller: 'CharacterCtrl',
+      controllerAs: 'character'
+    })
+    .when('/movie/:id', {
+      templateUrl: 'views/movie.html',
+      controller: 'MovieCtrl',
+      controllerAs: 'movie'
+    })
     .otherwise('/');
   }
 ]);
