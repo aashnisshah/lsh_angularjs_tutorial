@@ -1,11 +1,18 @@
-<h1>{{ heading }}</h1>
-<p>{{ message }}</h1>
-
-<div>
-  <div ng-repeat="person in data">
-    <p>
-      <b>{{ person.name }}</b> - <span ng-repeat="film in person.films">{{films[film]}}</span>
-    </p>
+<div class="col-md-10 col-md-offset-1">
+ 
+  <div class="page-header">
+    <h1>Star Wars</h1>
   </div>
-  <hr>
+ 
+  <div class="panel panel-default" ng-repeat="person in data">
+    <div class="panel-heading">{{ person.name }}</div>
+    <div class="panel-body">
+      <ul class="btn-group" ng-repeat="film in person.films">
+        <button class="btn btn-primary">
+          {{ films[film] }}
+        </button>
+      </ul>
+    </div>
+  </div>
+ 
 </div>
